@@ -1,0 +1,16 @@
+<p>
+  lista de articulos
+</p>
+
+<div *ngFor="let elem of articulos">
+  <app-articulo [datos]="elem" (borrar)="BorrarElemento(elem)"></app-articulo>
+</div>
+
+<div>
+  <form name='formulario'>
+    <label for='fArticulo' id='lblArticulo'>Articulo:</label>
+    <input type="text" id="fArticulo" name="fArticulo" [(ngModel)]="articulo"> 
+    <button (click)="CargaArticulo()">Agregar articulo</button>
+  </form>
+</div>
+
