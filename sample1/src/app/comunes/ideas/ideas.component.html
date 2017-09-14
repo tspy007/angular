@@ -1,0 +1,11 @@
+<div>
+  <form name='ideas'>
+    <label for='fIdea' id='lblIdea'>Dame una idea</label>
+    <input type="text" id="fIdea" name="fIdea" [(ngModel)]="idea"> 
+    <button (click)="agregaIdea()">Agrega idea</button>
+  </form>
+  <p>Lista de Ideas</p>
+  <ul>
+    <li *ngFor="let idea of ideas; let i = index">{{i+1}} {{idea}}</li>
+  </ul>
+</div>

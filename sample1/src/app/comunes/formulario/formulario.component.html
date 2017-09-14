@@ -1,0 +1,8 @@
+<div>
+  <form name='formulario'>
+    <label for='fNombre' id='lblNombre'>Indica tu nombre</label>
+    <input type="text" id="fNombre" name="fNombre" [(ngModel)]="nombre"> 
+    <button (click)="nombre=''">Borrar</button>
+  </form>
+  <p>Hola {{nombre}}</p>
+</div>

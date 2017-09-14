@@ -1,0 +1,25 @@
+<div>
+  <input type="radio" name="radiobut" [(ngModel)]="radiosel" value="radio 1"><label>Radio 1</label>
+  <input type="radio" name="radiobut" [(ngModel)]="radiosel" value="radio 2"><label>Radio 2</label>
+
+  <p>Seleccionado {{radiosel}}</p>
+
+  <form name='formulario2'>
+    <select name="select1" [(ngModel)]="resultado">
+      <option *ngFor = "let provincia of provincias" [ngValue]="provincia">{{provincia.nombre}}</option>
+    </select>
+  </form>
+  <p>Seleccionada  {{resultado.nombre}} con id {{resultado.id}}</p>
+  <br/>
+  <span *ngFor = "let opcion of opciones">
+    <input type="checkbox" [(ngModel)]="opcion.selected"/>{{opcion.valor}}
+  </span>
+  <p>Pulsados
+  <span *ngFor = "let opcion of opciones">
+    <p *ngIf="opcion.selected">
+    {{opcion.valor}}
+    </p>
+  </span>
+    
+  </p>
+</div>
