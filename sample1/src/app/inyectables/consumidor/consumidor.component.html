@@ -1,0 +1,11 @@
+<p>
+  Lista de libros 
+</p>
+<form name='formulario2'>
+  <input type="text" [(ngModel)]="buscador">
+  <button name="buscar" (click)="buscarLibros()">Buscar</button>
+ </form>
+
+ <ul> 
+  <li *ngFor="let libro of libros">{{libro}}</li>
+ </ul>

@@ -1,0 +1,7 @@
+<form name='formulario2'>
+  <input name="txtBuscar" type="text" [(ngModel)]="buscador">
+  <button name="buscar" (click)="buscarLibros()">Buscar</button>
+ </form>
+<ul>
+  <li *ngFor="let elem of books">{{elem}}</li>
+</ul>
