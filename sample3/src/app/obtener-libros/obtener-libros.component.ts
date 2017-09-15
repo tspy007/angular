@@ -13,15 +13,13 @@ export class ObtenerLibrosComponent implements OnInit {
 
   public books
 
-  public buscador: string
-
   ngOnInit() {
   }
 
-  buscarLibros() {
+  buscarLibros(buscador: string) {
 	
     this.books = [];
-    let url ="https://www.googleapis.com/books/v1/volumes?q=intitle:"+this.buscador;
+    let url ="https://www.googleapis.com/books/v1/volumes?q=intitle:"+buscador;
     
     this.http.get(url).subscribe(
       response => {
